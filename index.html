@@ -11,23 +11,37 @@
 <body>
     
     <header>
-        <div class="container d-flex align-items-center justify-content-between">
+        <div class="container mc-container d-flex align-items-center justify-content-between">
             <div class="logo d-flex align-items-center">
                 LOGO
                <h1>Campominato</h1>
             </div>
-            <div class="select-mode-go">
-                <input type="text" id="level">
-                <button id="start">START</button>
+            <div class="select-mode-go d-flex align-items-center">
+                <label><strong>Seleziona la Difficoltà: </strong>&ThickSpace;</label>
+                <div class="select">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Beginner</option>
+                        <option value="1">Intermediate</option>
+                        <option value="2">Boss</option>
+                    </select>
+                </div>
+                <button id="start">Play</button>
             </div>
         </div>
     </header>
-
-    <div class="wrapper d-flex align-items-center justify-content-center">
-        <div id="grid" class="container square-container">
+    <main>
+        <div class="wrapper d-flex align-items-center justify-content-center">
+            <div id="grid" class="container square-container">
             <!-- <div class="square"></div> -->
+            </div>
         </div>
-    </div>
+    </main>
+    <footer>
+        <div class="container mc-container d-flex justify-content-between">
+            <span>Made with &hearts; By Booleaner</span>
+            <div>Class #75</div>
+        </div>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
