@@ -10,24 +10,35 @@ const grid = document.getElementById('grid');
 //QUANTI BOX CI SONO PER ROW
 const boxPerRow = 10;
 
+//INIZIO IL "GIOCO"
 init(boxPerRow);
 
-function init(nBox){
-    const totalBox = Math.pow(nBox, 2);
 
+// CREO LA FUNZIONE CHE INIZIA TUTTO
+function init(nBox){
+    //ELEVO IL NUMERO DI BOX PER RIGA ALLA POTENZA PER CREARE LA GRIGLIA
+    const totalBox = Math.pow(nBox, 2);
+    //GENERO LA GRIGLIA CON UN CICLO FOR
     for(let i = 0; i < totalBox; i++){
         squareGenerator(i);
     };
 };
 
+// CREO LA FUNZIONE CHE GENERA IL BOX
 function squareGenerator(boxID){
+    //CREO IL BOX
     const box = document.createElement('div');
     box.className = 'square';
+    //ASSEGNO UN NUMERO AL BOX
     box.innerHTML = boxID + 1;
+    //AGGIUNGO UN' EVENTO AL BOX
     box.addEventListener('click', clickBox);
+    //LO APPENDO AL CONTAINER
     grid.append(box);
 };
 
+//CREO UNA FUNZIONE CHE PERMETTE DI INTERAGIRE CON I BOX
 function clickBox(){
-    this.classList.add('bg-azure')
+    this.classList.add('bg-azure');
+    console.log(this.innerHTML);
 };
