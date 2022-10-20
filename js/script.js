@@ -16,12 +16,18 @@ function init(nBox){
     const totalBox = Math.pow(nBox, 2);
 
     for(let i = 0; i < totalBox; i++){
-        squareGenerator();
+        squareGenerator(i);
     };
 };
 
-function squareGenerator(){
+function squareGenerator(boxID){
     const box = document.createElement('div');
-    box.classList = 'square';
+    box.className = 'square';
+    box.innerHTML = boxID + 1;
+    box.addEventListener('click', clickBox);
     grid.append(box);
-}
+};
+
+function clickBox(){
+    this.classList.add('bg-azure')
+};
