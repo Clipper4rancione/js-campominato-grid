@@ -31,11 +31,18 @@ function squareGenerator(boxID){
     box.className = 'square';
     //ASSEGNO UN NUMERO AL BOX
     box.innerHTML = boxID + 1;
+
+    box.style.width = calcCss();
+    box.style.height = calcCss();
     //AGGIUNGO UN' EVENTO AL BOX
     box.addEventListener('click', clickBox);
     //LO APPENDO AL CONTAINER
     grid.append(box);
 };
+
+function calcCss(){
+    return ` calc(100% / ${boxPerRow})`;
+}
 
 //CREO UNA FUNZIONE CHE PERMETTE DI INTERAGIRE CON I BOX
 function clickBox(){
