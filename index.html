@@ -19,8 +19,8 @@
             <div class="select-mode-go d-flex align-items-center">
                 <label><strong>Seleziona la Difficoltà: </strong>&ThickSpace;</label>
                 <div class="select">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Beginner</option>
+                    <select id="difficulty" class="form-select" onchange="difficultySelector()" aria-label="Default select example">
+                        <option selected value="0">Beginner</option>
                         <option value="1">Intermediate</option>
                         <option value="2">Boss</option>
                     </select>

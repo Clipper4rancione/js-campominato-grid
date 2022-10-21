@@ -8,10 +8,19 @@ Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro e
 //SELEZIONO IL CONTAINER
 const grid = document.getElementById('grid');
 //QUANTI BOX CI SONO PER ROW
-const boxPerRow = 10;
+let boxPerRow = 10;
 
-//INIZIO IL "GIOCO"
-init(boxPerRow);
+
+
+
+document.getElementById('start').addEventListener('click', function(){
+    grid.innerHTML = ''
+    //INIZIO IL "GIOCO"
+    init(boxPerRow);
+});
+
+
+
 
 
 // CREO LA FUNZIONE CHE INIZIA TUTTO
